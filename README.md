@@ -20,7 +20,6 @@ Steps:
   
   <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <LinearLayout
         ...
         >
@@ -52,7 +51,7 @@ Steps:
   
 6. You can use this data object to set values to view attributes as below:
 
-  android:text="@{mCandidate.yearsOfExp +` years`}"
+  android:text="@{mCandidate.yearsOfExp}"
   
 7. From your activity you can set the xml's data variable as below:
 
