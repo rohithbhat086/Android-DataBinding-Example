@@ -21,15 +21,17 @@ class MainActivity : AppCompatActivity() {
         mBinding.invalidateAll()
 
         mBinding.editData.setOnClickListener { view ->
-            mBinding.detailsView.visibility = View.GONE
-            mBinding.detailsEdit.visibility = View.VISIBLE
-            view.visibility = View.GONE
-            mBinding.saveData.visibility = View.VISIBLE
+            mBinding.apply {
+                detailsView.visibility = View.GONE
+                detailsEdit.visibility = View.VISIBLE
+                view.visibility = View.GONE
+                saveData.visibility = View.VISIBLE
+            }
         }
 
         mBinding.saveData.setOnClickListener { view ->
             // Update data variable
-            mUser.name = mBinding.editName.text.toString()
+            mUser.name = if (mBinding.editName.text.toString().isEmpty()) null else mBinding.editName.text.toString()
             mUser.description = mBinding.editDescription.text.toString()
             mUser.yearsOfExp = mBinding.editExp.text.toString().toFloat()
             mUser.skills = mBinding.editSkill.text.toString()
