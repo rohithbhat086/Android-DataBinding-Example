@@ -58,4 +58,4 @@ Steps:
   mUser = User()
   mBinding.mCandidate = mUser
 ```
-8. As and when the data object gets changed, you can update it and call invalidateAll() on binding object, so that the views can take updated values.
+8. As and when the data object gets changed, you can update it and call ```invalidateAll()``` on binding object, so that the views can take updated values.
