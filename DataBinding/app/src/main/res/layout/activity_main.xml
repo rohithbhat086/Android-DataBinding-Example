@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_base"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_heading" />
+
+        <LinearLayout
+            android:id="@+id/details_view"
+            tools:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_items"
+            android:layout_marginBottom="@dimen/margin_between_items"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Hello `+(mCandidate.name ?? `Candidate`)}"
+                android:textSize="@dimen/text_heading"
+                tools:text="Hello World!" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_items"
+                android:text="@string/your_profile_description"
+                android:textSize="@dimen/text_heading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_from_heading"
+                android:text="@{(mCandidate.description ?? `-Not set-`)}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_items"
+                android:text="@string/years_of_experience"
+                android:textSize="@dimen/text_heading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_from_heading"
+                android:text="@{mCandidate.yearsOfExp +` years`}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_items"
+                android:text="@string/skills"
+                android:textSize="@dimen/text_heading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_from_heading"
+                android:text="@{(mCandidate.skills ?? `-Not set-`)}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/details_edit"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginTop="@dimen/margin_between_items"
+            android:layout_marginBottom="@dimen/margin_between_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="@dimen/text_heading"/>
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:inputType="textPersonName"
+                android:text="@{mCandidate.name ?? ``}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_from_heading"
+                android:hint="@string/enter_your_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_items"
+                android:textSize="@dimen/text_heading"
+                android:text="@string/your_profile_description" />
+
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{(mCandidate.description ?? ``)}"
+                android:hint="@string/enter_description_here"
+                android:layout_marginTop="@dimen/margin_from_heading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_heading"
+                android:layout_marginTop="@dimen/margin_between_items"
+                android:text="@string/years_of_experience" />
+
+            <EditText
+                android:id="@+id/edit_exp"
+                android:text="@{mCandidate.yearsOfExp +``}"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_from_heading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_heading"
+                android:layout_marginTop="@dimen/margin_between_items"
+                android:text="@string/skills" />
+
+            <EditText
+                android:id="@+id/edit_skill"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{(mCandidate.skills ?? ``)}"
+                android:layout_marginTop="@dimen/margin_from_heading"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/edit_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit" />
+
+        <Button
+            android:id="@+id/save_data"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="mCandidate"
+            type="com.rgb.example.databinding.data.User" />
+    </data>
+</layout>

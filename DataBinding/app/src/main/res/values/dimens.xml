@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_base">20dp</dimen>
+    <dimen name="margin_between_items">20dp</dimen>
+    <dimen name="text_heading">20sp</dimen>
+    <dimen name="margin_from_heading">10dp</dimen>
+</resources>

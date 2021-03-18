@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ExDataBinding</string>
+    <string name="app_heading">This example app demonstrates the use of data binding in android</string>
+    <string name="your_profile_description">Your profile Description</string>
+    <string name="years_of_experience">Years of experience</string>
+    <string name="skills">Skills</string>
+    <string name="name">Name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_description_here">Enter description here</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+</resources>
