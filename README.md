@@ -16,6 +16,12 @@ Steps:
     enabled = true
   }
 ```
+  For gradle version 4.0 use below instead :
+```
+  buildFeatures {
+    dataBinding = true
+  }
+```
 2. Wrap all views in your layout xml file into a <layout> tag.
 ```
   <layout xmlns:android="http://schemas.android.com/apk/res/android"
