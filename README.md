@@ -16,7 +16,7 @@ Steps:
     enabled = true
   }
 ```
-  For gradle version 4.0 use below instead :
+  For gradle version 4.0 and above, use below instead :
 ```
   buildFeatures {
     dataBinding = true
